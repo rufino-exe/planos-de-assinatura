@@ -5,12 +5,14 @@ public class PlanoBasico extends PlanosAssinatura {
     private int limiteUsuarios;
     private Double armazenamento;
 
-    
+    //Construtores Vazios
     public PlanoBasico() {
     }
     public PlanoBasico(String nome, Double precoMensal) {
         super(nome, precoMensal);
     }
+    
+    //Construtores Padrao
     public PlanoBasico(int limiteUsuarios, Double armazenamento) {
         this.limiteUsuarios = limiteUsuarios;
         this.armazenamento = armazenamento;
@@ -21,7 +23,7 @@ public class PlanoBasico extends PlanosAssinatura {
         this.armazenamento = 25.0;
     }
 
-
+    //Getters e Setters
     public int getLimiteUsuarios() {
         return limiteUsuarios;
     }
@@ -35,13 +37,14 @@ public class PlanoBasico extends PlanosAssinatura {
         this.armazenamento = armazenamento;
     }
 
-   
+   //Método Listar benefícios
     public String listarBeneficios(){
         return "Benefícios do Plano Básico: Limite de usuários: " + limiteUsuarios + 
                "\nArmazenamento: " + armazenamento;
 
     }
     
+    //Método para troca de plano
     public PlanosAssinatura trocarPlano (String planoEscolhido){
         if (planoEscolhido.equalsIgnoreCase("Premium")) {
             return new PlanoPremium("Premium", 100.0, 10, 100.0, true, true, true);

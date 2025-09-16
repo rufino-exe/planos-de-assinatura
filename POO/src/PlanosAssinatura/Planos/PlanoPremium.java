@@ -7,7 +7,7 @@ public class PlanoPremium extends PlanoBasico{
     private boolean acessoOffline;
     private boolean backupAutomatico;
 
-    
+    //Construtores Vazios
     public PlanoPremium() {
     }
     public PlanoPremium(String nome, Double precoMensal) {
@@ -19,6 +19,8 @@ public class PlanoPremium extends PlanoBasico{
     public PlanoPremium(String nome, Double precoMensal, int limiteUsuarios, Double armazenamento) {
         super(nome, precoMensal, limiteUsuarios, armazenamento);
     }
+
+    //Construtores Padrão
     public PlanoPremium(int limiteUsuarios, Double armazenamento, boolean suportePrioritario, boolean acessoOffline,
             boolean backupAutomatico) {
         super(limiteUsuarios, armazenamento);

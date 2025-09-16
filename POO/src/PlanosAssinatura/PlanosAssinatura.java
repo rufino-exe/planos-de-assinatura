@@ -5,14 +5,17 @@ public class PlanosAssinatura {
     private String nome;
     private Double precoMensal;
 
+    //Construtor Vazio
     public PlanosAssinatura() {
     }
 
+    //Construtor Padrão
     public PlanosAssinatura(String nome, Double precoMensal) {
         this.nome = nome;
         this.precoMensal = precoMensal;
     }
 
+    //Getters e Setters
     public String getNome() {
         return nome;
     }
@@ -29,10 +32,12 @@ public class PlanosAssinatura {
         this.precoMensal = precoMensal;
     }
 
+    //Método que calcula preço anual do plano
     public Double CalcularPrecoAnual() {
         return precoMensal * 12;
     } 
 
+    //Método da troca de plano
     public PlanosAssinatura trocarPlano(String planoEscolhido) {
         return this;
     }

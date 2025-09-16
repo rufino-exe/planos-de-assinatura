@@ -7,6 +7,7 @@ public final class PlanoEnterprise extends PlanoPremium{
     private boolean suporte24h;
     private boolean controleAcesso;
     
+    //Construtores Vazios
     public PlanoEnterprise(int limiteUsuarios, Double armazenamento, boolean suportePrioritario, boolean acessoOffline,
             boolean backupAutomatico) {
         super(limiteUsuarios, armazenamento, suportePrioritario, acessoOffline, backupAutomatico);
@@ -15,6 +16,8 @@ public final class PlanoEnterprise extends PlanoPremium{
             boolean suportePrioritario, boolean acessoOffline, boolean backupAutomatico) {
         super(nome, precoMensal, limiteUsuarios, armazenamento, suportePrioritario, acessoOffline, backupAutomatico);
     }
+
+    //Construtores Padrao
     public PlanoEnterprise(int limiteUsuarios, Double armazenamento, boolean suportePrioritario, boolean acessoOffline,
             boolean backupAutomatico, boolean personalizacao, boolean suporte24h, boolean controleAcesso) {
         super(limiteUsuarios, armazenamento, suportePrioritario, acessoOffline, backupAutomatico);
@@ -30,6 +33,8 @@ public final class PlanoEnterprise extends PlanoPremium{
         this.suporte24h = suporte24h;
         this.controleAcesso = controleAcesso;
     }
+
+    //Getters e Setters
     public boolean isPersonalizacao() {
         return personalizacao;
     }
