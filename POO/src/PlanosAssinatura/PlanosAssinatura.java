@@ -32,4 +32,8 @@ public class PlanosAssinatura {
     public Double CalcularPrecoAnual() {
         return precoMensal * 12;
     } 
+
+    public PlanosAssinatura trocarPlano(String planoEscolhido) {
+        return this;
+    }
 }
