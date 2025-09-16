@@ -2,7 +2,7 @@ package PlanosAssinatura.Planos;
 
 import PlanosAssinatura.PlanosAssinatura;
 
-public class PlanoEnterprise extends PlanoPremium{
+public final class PlanoEnterprise extends PlanoPremium{
     private boolean personalizacao;
     private boolean suporte24h;
     private boolean controleAcesso;
