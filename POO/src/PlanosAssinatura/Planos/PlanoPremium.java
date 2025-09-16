@@ -1,5 +1,6 @@
 package PlanosAssinatura.Planos;
 
+import PlanosAssinatura.PlanosAssinatura;
 
 public class PlanoPremium extends PlanoBasico{
     private boolean suportePrioritario;
@@ -51,4 +52,12 @@ public class PlanoPremium extends PlanoBasico{
         this.backupAutomatico = backupAutomatico;
     }
      
+    public PlanosAssinatura trocarPlano(String planoEscolhido){
+        if (planoEscolhido.equalsIgnoreCase("Enterprise")) {
+            return new PlanoEnterprise("Enterprise", 300.0, 100, 100.0, true, true, true);
+        } else if (planoEscolhido.equalsIgnoreCase("Básico")){
+            return new PlanoBasico("Básico", 50.0, 3, 25.0);
+        }
+        return this;
+    }
 }

@@ -42,6 +42,12 @@ public class PlanoBasico extends PlanosAssinatura {
 
     }
     
-
-
+    public PlanosAssinatura trocarPlano (String planoEscolhido){
+        if (planoEscolhido.equalsIgnoreCase("Premium")) {
+            return new PlanoPremium("Premium", 100.0, 10, 100.0, true, true, true);
+        } else if (planoEscolhido.equalsIgnoreCase("Enterprise")) {
+            return new PlanoEnterprise("Enterprise", 300.0, 100, 1000.0, true, true, true, true, true, true);
+    }
+    return this;
+}
 }
