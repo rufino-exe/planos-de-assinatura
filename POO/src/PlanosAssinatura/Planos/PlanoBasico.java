@@ -18,10 +18,19 @@ public class PlanoBasico extends PlanosAssinatura {
         this.armazenamento = armazenamento;
     }
     public PlanoBasico(String nome, Double precoMensal, int limiteUsuarios, Double armazenamento) {
-        super( "Básico", 50.0);
+        super( nome, precoMensal);
         this.limiteUsuarios = 3;
         this.armazenamento = 25.0;
     }
+
+    
+    public void exibirDetalhes() {
+    System.out.println("\n--- PLANO BÁSICO ---");
+    System.out.println("Nome: " + getNome());
+    System.out.println("Preço Mensal: R$ " + getPrecoMensal());
+    System.out.println("Limite de Usuários: " + getLimiteUsuarios());
+    System.out.println("Armazenamento: " + getArmazenamento() + " GB");
+}
 
     //Getters e Setters
     public int getLimiteUsuarios() {
@@ -37,13 +46,7 @@ public class PlanoBasico extends PlanosAssinatura {
         this.armazenamento = armazenamento;
     }
 
-    public void exibirDetalhes() {
-    System.out.println("\n--- PLANO BÁSICO ---");
-    System.out.println("Nome: " + getNome());
-    System.out.println("Preço Mensal: R$ " + getPrecoMensal());
-    System.out.println("Limite de Usuários: " + getLimiteUsuarios());
-    System.out.println("Armazenamento: " + getArmazenamento() + " GB");
-}
+    
 
    //Método Listar benefícios
     public String listarBeneficios(){

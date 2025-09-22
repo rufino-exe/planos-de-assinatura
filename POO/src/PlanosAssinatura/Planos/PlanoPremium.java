@@ -30,11 +30,11 @@ public class PlanoPremium extends PlanoBasico{
         this.backupAutomatico = backupAutomatico;
     }
     public PlanoPremium(String nome, Double precoMensal, int limiteUsuarios, Double armazenamento,
-            boolean suportePrioritario, boolean acessoOffline, boolean backupAutomatico) {
-        super("Premium", 100.0, limiteUsuarios, armazenamento);
-        this.suportePrioritario = true;
-        this.acessoOffline = true;
-        this.backupAutomatico = true;
+        boolean suportePrioritario, boolean acessoOffline, boolean backupAutomatico) {
+    super(nome, precoMensal, limiteUsuarios, armazenamento);
+    this.suportePrioritario = suportePrioritario;
+    this.acessoOffline = acessoOffline;
+    this.backupAutomatico = backupAutomatico;
     }
     public boolean isSuportePrioritario() {
         return suportePrioritario;

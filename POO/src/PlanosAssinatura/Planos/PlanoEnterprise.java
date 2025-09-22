@@ -26,13 +26,13 @@ public final class PlanoEnterprise extends PlanoPremium{
         this.controleAcesso = controleAcesso;
     }
     public PlanoEnterprise(String nome, Double precoMensal, int limiteUsuarios, Double armazenamento,
-            boolean suportePrioritario, boolean acessoOffline, boolean backupAutomatico, boolean personalizacao,
-            boolean suporte24h, boolean controleAcesso) {
-        super("Enterprise", 300.0, 100, 100.0, true, true, true);
-        this.personalizacao = personalizacao;
-        this.suporte24h = suporte24h;
-        this.controleAcesso = controleAcesso;
-    }
+        boolean suportePrioritario, boolean acessoOffline, boolean backupAutomatico, boolean personalizacao,
+        boolean suporte24h, boolean controleAcesso) {
+    super(nome, precoMensal, limiteUsuarios, armazenamento, suportePrioritario, acessoOffline, backupAutomatico); // ✅ Usar parâmetros
+    this.personalizacao = personalizacao;
+    this.suporte24h = suporte24h;
+    this.controleAcesso = controleAcesso;
+}
 
     public void exibirDetalhes() {
     System.out.println("\n--- PLANO ENTERPRISE ---");
