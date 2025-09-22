@@ -19,8 +19,16 @@ public class App {
             System.out.println("8. Sair");
             System.out.print("Escolha uma opção: ");
             
-            opcao = scanner.nextInt();
-            scanner.nextLine(); // Limpar buffer
+            while (true) {
+                try {
+                    opcao = scanner.nextInt();
+                    scanner.nextLine(); // Limpar buffer
+                    break;
+                } catch (Exception e) {
+                    System.out.println("Entrada inválida! Digite um número válido: ");
+                    scanner.nextLine(); // Limpar buffer inválido
+                }
+            }
             
             switch (opcao) {
                 case 1:
@@ -44,7 +52,17 @@ public class App {
                     System.out.println("2. Plano Premium");
                     System.out.println("3. Plano Enterprise");
                     System.out.print("Escolha: ");
-                    int escolhaPlano = scanner.nextInt();
+                    
+                    int escolhaPlano;
+                    while (true) {
+                        try {
+                            escolhaPlano = scanner.nextInt();
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Entrada inválida! Digite um número válido: ");
+                            scanner.nextLine(); // Limpar buffer inválido
+                        }
+                    }
                     
                     switch (escolhaPlano) {
                         case 1:
@@ -74,8 +92,18 @@ public class App {
                     System.out.println("1. Do Básico para outro plano");
                     System.out.println("2. Do Premium para outro plano");
                     System.out.print("Escolha: ");
-                    int tipoTroca = scanner.nextInt();
-                    scanner.nextLine(); // Limpar buffer
+                    
+                    int tipoTroca;
+                    while (true) {
+                        try {
+                            tipoTroca = scanner.nextInt();
+                            scanner.nextLine(); // Limpar buffer
+                            break;
+                        } catch (Exception e) {
+                            System.out.println("Entrada inválida! Digite um número válido: ");
+                            scanner.nextLine(); // Limpar buffer inválido
+                        }
+                    }
                     
                     if (tipoTroca == 1) {
                         PlanoBasico basicoTroca = new PlanoBasico("Básico", 50.0, 3, 25.0);
