@@ -34,6 +34,20 @@ public final class PlanoEnterprise extends PlanoPremium{
         this.controleAcesso = controleAcesso;
     }
 
+    public void exibirDetalhes() {
+    System.out.println("\n--- PLANO ENTERPRISE ---");
+    System.out.println("Nome: " + getNome());
+    System.out.println("Preço Mensal: R$ " + getPrecoMensal());
+    System.out.println("Limite de Usuários: " + getLimiteUsuarios());
+    System.out.println("Armazenamento: " + getArmazenamento() + " GB");
+    System.out.println("Suporte Prioritário: " + (isSuportePrioritario() ? "Sim" : "Não"));
+    System.out.println("Acesso Offline: " + (isAcessoOffline() ? "Sim" : "Não"));
+    System.out.println("Backup Automático: " + (isBackupAutomatico() ? "Sim" : "Não"));
+    System.out.println("Personalização: " + (isPersonalizacao() ? "Sim" : "Não"));
+    System.out.println("Suporte 24h: " + (isSuporte24h() ? "Sim" : "Não"));
+    System.out.println("Controle de Acesso: " + (isControleAcesso() ? "Sim" : "Não"));
+}
+
     //Getters e Setters
     public boolean isPersonalizacao() {
         return personalizacao;

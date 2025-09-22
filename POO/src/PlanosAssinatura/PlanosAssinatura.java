@@ -35,7 +35,7 @@ public class PlanosAssinatura {
     //Método que calcula preço anual do plano
     public Double CalcularPrecoAnual() {
         return precoMensal * 12;
-    } 
+    }
 
     //Método da troca de plano
     public PlanosAssinatura trocarPlano(String planoEscolhido) {

@@ -12,6 +12,7 @@ public class PlanoPremium extends PlanoBasico{
     }
     public PlanoPremium(String nome, Double precoMensal) {
         super(nome, precoMensal);
+        this.setPrecoMensal(100.0);
     }
     public PlanoPremium(int limiteUsuarios, Double armazenamento) {
         super(limiteUsuarios, armazenamento);
@@ -53,6 +54,17 @@ public class PlanoPremium extends PlanoBasico{
     public void setBackupAutomatico(boolean backupAutomatico) {
         this.backupAutomatico = backupAutomatico;
     }
+
+    public void exibirDetalhes() {
+    System.out.println("\n--- PLANO PREMIUM ---");
+    System.out.println("Nome: " + getNome());
+    System.out.println("Preço Mensal: R$ " + getPrecoMensal());
+    System.out.println("Limite de Usuários: " + getLimiteUsuarios());
+    System.out.println("Armazenamento: " + getArmazenamento() + " GB");
+    System.out.println("Suporte Prioritário: " + (isSuportePrioritario() ? "Sim" : "Não"));
+    System.out.println("Acesso Offline: " + (isAcessoOffline() ? "Sim" : "Não"));
+    System.out.println("Backup Automático: " + (isBackupAutomatico() ? "Sim" : "Não"));
+}
      
     public PlanosAssinatura trocarPlano(String planoEscolhido){
         if (planoEscolhido.equalsIgnoreCase("Enterprise")) {
